@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6 m6 l4" v-for="row in rowsOfWheel">
+                        <div class="input-field col s6 m6 l4" v-for="row in parseInt(rowsOfWheel)">
                             <input name="numberWheelPerRow[]" type="number" class="validate" value="2" required>
                             <label for="numberWheelPerRow">จำนวนล้อ/แถว {{ row }} <span class="icon-star">*</span></label>
                         </div>

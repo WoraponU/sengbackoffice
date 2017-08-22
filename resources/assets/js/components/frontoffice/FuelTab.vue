@@ -1,6 +1,6 @@
 <template>
 	<div class="container center-align">
-		<form action="/fuel" method="POST">
+		<form action="/fuel" method="POST" autocomplete="on">
 			<input type="hidden" name="_token" v-model="csrfToken">
 
 			<TruckAndDriverMap v-on:truckIdSelected="truckIdSelected"></TruckAndDriverMap>
@@ -39,7 +39,7 @@
 							<label for="lastNumberCar">หมายเลขกิโลเมตรครั้งก่อน <span class="icon-star">*</span></label>
 						</div>   
 						<div class="input-field col s12 m6 l4">
-							<input id="presentNumberCar" name="presentNumberCar" type="number" :min="lastNumberCar+1" v-model="presentNumberCar" class="validate" required>
+							<input id="presentNumberCar" name="presentNumberCar" type="number" :min="parseInt(lastNumberCar)+1" v-model="presentNumberCar" class="validate" required>
 							<label for="presentNumberCar">หมายเลขกิโลเมตรล่าสุด <span class="icon-star">*</span></label>
 						</div>  
 					</div>

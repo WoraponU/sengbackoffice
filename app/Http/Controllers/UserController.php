@@ -61,7 +61,6 @@ class UserController extends Controller
     {
         $rules = [
             'identificationNumber' => 'unique:users,identification_number|numeric',
-            'driverLicense' => 'unique:users,driver_license',
             'username' => 'unique:users,username',
             'phone' => 'numeric',
         ];
