@@ -223,41 +223,56 @@
 		mounted() {
 			this.userModel = JSON.parse(localStorage.getItem('auth'));
 			
-			axios.get('/fuel')
-            .then((response) => {
-                this.fuels = response.data
+			axios.get('/fuel', {
+        params: {
+          startDate: new Date(),
+          endDate: new Date(),
+        }
+      })
+      .then((response) => {
+        this.fuels = response.data
 				this.showModalReportFuel = true
 				if (this.fuels.length == 0) {
 					this.dataFuelNotFound = true;
 				}
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+      })
+      .catch(function (error) {
+          console.log(error);
+      });
 			////////////////////
-			axios.get('/tire')
-            .then((response) => {
-                this.tires = response.data
+			axios.get('/tire', {
+        params: {
+          startDate: new Date(),
+          endDate: new Date(),
+        }
+      })
+      .then((response) => {
+        this.tires = response.data
 				this.showModalReportTire = true	
 				if (this.tires.length == 0) {
 					this.dataTireNotFound = true;
 				}	
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+      })
+      .catch(function (error) {
+          console.log(error);
+      });
 			//////////////////////
-			axios.get('/maintain')
-            .then((response) => {
-                this.maintains = response.data
+			axios.get('/maintain', {
+        params: {
+          startDate: new Date(),
+          endDate: new Date(),
+        }
+      })
+      .then((response) => {
+        this.maintains = response.data
 				this.showModalReportMaintain = true
 				if (this.maintains.length == 0) {
 					this.dataMaintainNotFound = true;
 				}
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+      })
+      .catch(function (error) {
+          console.log(error);
+      });
 			////////////////////
 			axios.get('/backoffice/truckdriver')
             .then((response) => {

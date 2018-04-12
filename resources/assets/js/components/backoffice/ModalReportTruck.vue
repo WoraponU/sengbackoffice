@@ -81,6 +81,7 @@
 
 <script>
     import axios from 'axios';
+    import printJS from 'print-js';
     export default {
         props: {
             id: { require: true },

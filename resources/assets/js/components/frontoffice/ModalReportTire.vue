@@ -68,6 +68,7 @@
 
 <script>
     import Chart from 'chart.js'
+    import printJS from 'print-js';
 
     export default {
         data() {

@@ -65,6 +65,8 @@
 </template>
 
 <script>
+    import printJS from 'print-js';
+
     export default {
         data() {
 			return {
