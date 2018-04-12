@@ -225,8 +225,8 @@
 			
 			axios.get('/fuel', {
         params: {
-          startDate: new Date(),
-          endDate: new Date(),
+          startDate: new Date().toISOString().slice(0,10),
+          endDate: new Date().toISOString().slice(0,10),
         }
       })
       .then((response) => {
@@ -242,8 +242,8 @@
 			////////////////////
 			axios.get('/tire', {
         params: {
-          startDate: new Date(),
-          endDate: new Date(),
+          startDate: new Date().toISOString().slice(0,10),
+          endDate: new Date().toISOString().slice(0,10),
         }
       })
       .then((response) => {
@@ -259,8 +259,8 @@
 			//////////////////////
 			axios.get('/maintain', {
         params: {
-          startDate: new Date(),
-          endDate: new Date(),
+          startDate: new Date().toISOString().slice(0,10),
+          endDate: new Date().toISOString().slice(0,10),
         }
       })
       .then((response) => {
